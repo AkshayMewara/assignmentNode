@@ -1,0 +1,2 @@
+# assignmentNode
+node training assignments 
