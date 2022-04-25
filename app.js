@@ -2,7 +2,8 @@ const express = require('express');
 require("./src/database/connection");
 
 const router = require("./src/routes/book");
-const userRouter = require('./src/routes/user')
+const userRouter = require('./src/routes/user');
+const logger = require("./src/utility/logger");
 
 
 const app = express();
@@ -20,5 +21,5 @@ app.use(userRouter);
 
 
 app.listen(port, () => {
-    console.log(`connection is live at port no. ${port}`);
+    logger.info(`connection is live at port no. ${port}`);
 })

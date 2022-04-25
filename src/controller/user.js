@@ -3,7 +3,8 @@ const CryptoJS = require('crypto-js');
 const jwt = require('jsonwebtoken');
 
 const Users = require('../models/users');
-const message = require('../utility/status')
+const message = require('../utility/status');
+const logger = require('../utility/logger');
 
 exports.signup = async (req, res) => {
     try {
@@ -48,7 +49,7 @@ exports.signin = async (req, res) => {
 
             res.send(accessToken);
             // console.log(userEmail);
-            console.log(accessToken);
+            logger.info(accessToken);
         } else {
             res.send("wrong password");
         }
