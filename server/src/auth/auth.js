@@ -9,12 +9,10 @@ const authMiddleware = (req, res, next) => {
         try {
             var decoded = jwt.verify(token,"helloworldthisisjsonwebtoken");
             next();
-        }
-        
+        }   
 	catch (e) {
         res.send("wrong token");
     }
 }
-
 
 module.exports = authMiddleware;

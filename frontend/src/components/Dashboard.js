@@ -22,15 +22,6 @@ export const Dashboard = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {/* <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to="#">Home</NavLink>
-                            </li> */}
-
-                            {/* <div>
-                                <button type="button" className="btn btn-primary" onClick={getBooks} >Add Book</button>
-                            </div> */}
-
-
                             <div>
                                 <button type="button" className="btn btn-primary" onClick={handleBook} >Add Book</button>
                             </div>
@@ -39,7 +30,6 @@ export const Dashboard = () => {
                     <div>
                         <button type="button" className="btn btn-danger" onClick={handleSignup} >Logout</button>
                     </div>
-
                 </div>
             </nav>
             <h1>Welcome to Book Store</h1>

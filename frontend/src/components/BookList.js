@@ -13,7 +13,6 @@ export const BookList = () => {
     useEffect(() => {
         const getBooks = (e) => {
             // e.preventDefault();
-
             try {
                 axios.get("http://localhost:9000/book",
                     {
@@ -24,7 +23,6 @@ export const BookList = () => {
                     .then((res) => {
                         setBooks(res.data);
                         console.log(books);
-
                     })
             } catch (err) {
                 console.log(err);
@@ -45,7 +43,6 @@ export const BookList = () => {
                     console.log(res);
                 })
             setRender(!render);
-
         } catch (err) {
             console.log(err);
         }
@@ -57,9 +54,9 @@ export const BookList = () => {
             {/* <BookCard /> */}
             <div>
                 {
-                    books.map((book) => (
-                        <div className="user"><BookCard title={book} deleteBook={deleteBook} /></div>
-                    ))
+                    books.map((book, index) => {
+                        return <BookCard book={book} deleteBook={deleteBook} key={index} />
+                    })
                 }
             </div>
         </div>

@@ -8,7 +8,6 @@ export const SignUp = () => {
     const navigate = useNavigate();
     sessionStorage.clear();
 
-
     const handleClick = () => {
         navigate("/");
     }
@@ -17,13 +16,10 @@ export const SignUp = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-
             let user = { name, email, password };
-
             await axios.post("http://localhost:9000/signup", user)
                 .then((res) => {
                     console.log(res);
